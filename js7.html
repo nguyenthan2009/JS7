@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .colum{
+            padding:8px;
+            display:inline-block;
+        }
+
+    </style>
+</head>
+<body>
+<form>
+
+      <div class="colum">
+           <label for="ab">Amount</label>
+           <input type="text" id="ab"   />
+      </div>
+        <div class="colum">
+          <label for="b">From Currency</label>
+           <select id="b">
+           <option>VietNam</option>
+           </select>
+       </div>
+      <div class="colum">
+    <label for="c">From Currency</label>
+    <select id="c">
+        <option>USD</option>
+    </select>
+    </div>
+    <div class="colum" style="background-color: coral">
+        <button id="get">Convert</button>
+    </div>
+    <script>
+        let value;
+        value= document.getElementById("ab")
+        value.addEventListener("change",onchange)
+        function onchange(){
+            getvalue= document.getElementById("ab").value
+
+        }
+        convert= document.getElementById("get")
+         convert.addEventListener("click",clickconvert)
+         function clickconvert(){
+
+             let DOITIEN;
+               DOITIEN= getvalue/23000;
+             document.write("Số USD ra sau khi đổi từ VND  sang =" +DOITIEN)
+         }
+
+
+    </script>
+
+</form>
+<script>
+
+</script>
+
+</body>
+</html>
